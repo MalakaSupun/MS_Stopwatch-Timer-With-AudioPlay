@@ -347,6 +347,109 @@ class MainWindow(QMainWindow):
             self.TimeOut_Count = 0
             self.StopBTN.setEnabled(False)
             self.StartBTN.setEnabled(True)
+            
+     
+    def Play_Pause(self):
+        if self.FolderAdded == 1 and len(self.song_list) != 0:
+            try:
+                for item in full_list:
+                    self.playlist.addMedia(QMediaContent(QUrl.fromLocalFile(item)))
+                self.player = QMediaPlayer()
+                self.player.setPlaylist(self.playlist)
+
+            except :
+                print("Error.........Song Listing........")
+
+            if self.Playing == 0:
+                print("Play")
+                self.PlayBtn.setIcon(QIcon(r'Icons\pauseIcon.png'))
+                self.GIF()
+                self.Playing = 1
+
+                QMediaPlaylist.setCurrentIndex(self.playlist, self.SongIndex)
+                print("Audio Playing")
+                self.player.play()
+
+
+            elif self.Playing == 1:
+                print("Pause")
+                self.PlayBtn.setIcon(QIcon(r'Icons\playIcon.png'))
+                self.label_MS.setText("MS")
+                self.Playing = 0
+
+                try:
+                    self.player.pause()
+                except:
+                    print("Nothing to Stop")
+        else:
+            print("Add Audio folder that have MP3s")
+
+    def AudioFolder(self):
+        try:
+            Audio_folder = str(QFileDialog.getExistingDirectory(self, " Select Directory to Play Audios...."))
+            os.chdir(Audio_folder)
+            song_list_content = os.listdir(Audio_folder)
+
+            self.song_list = [x for x in song_list_content if x.endswith(".mp3")]
+
+            for i in self.song_list:
+                audio = f"{Audio_folder}/{i}"
+                print(audio)
+                full_list.append(audio)
+            #print(full_list)
+            self.FolderAdded = 1
+        except OSError as x1:
+            print(x1)
+        except:
+            print("Error happen while getting Mp3s form folder.....")
+
+    def NextSong(self):
+        print("Next")
+        try:
+            self.player.pause()
+
+            if self.SongIndex != len(self.song_list):
+                self.SongIndex += 1
+            elif self.SongIndex == len(self.song_list):
+                self.SongIndex = 0
+
+            QMediaPlaylist.setCurrentIndex(self.playlist, self.SongIndex)
+            self.player.play()
+
+            name = self.song_list[self.SongIndex]
+            self.SongName.setText(str(name))
+
+
+        except AttributeError as e1:
+            print(e1)
+        except:
+            print("Error happen when Forwarding")
+
+    def PreviousSong(self):
+        print("Back")
+        try:
+            if self.SongIndex != 0:
+                self.SongIndex -= 1
+            elif self.SongIndex == 0:
+                self.SongIndex = len(self.song_list)-1
+
+            self.player.pause()
+            QMediaPlaylist.setCurrentIndex(self.playlist, self.SongIndex)
+            self.player.play()
+
+            name = self.song_list[self.SongIndex]
+            self.SongName.setText(str(name))
+
+        except AttributeError as e1:
+            print(e1)
+        except:
+            print("Error happen when Backing")
+
+    def GIF(self):
+        Loading_GIf = QMovie(r"GIFs\audio-wave.gif")
+        self.label_MS.setMovie(Loading_GIf)
+        Loading_GIf.start()
+               
 
     def CloseApp(self):
         end_time = time.perf_counter()
