@@ -1,14 +1,19 @@
 import sys
 import os
 import winsound
+
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.uic import loadUiType, loadUi
+from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer, QMediaPlaylist
+
+import time
 
 from ProgressBar import CrlProgressBar
 
-import time
+full_list = []
+song_list = []
 
 
 class MainWindow(QMainWindow):
@@ -16,39 +21,45 @@ class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
 
+        #Loading Middle Watch UI.....................................
         loadUi('UI/MiddleWatch.ui', self)
         self.setWindowTitle('MS StopWatch & Timer')
 
+        # Set validation points to allow only to type numbers.........
         set_Validator_SecMin = QRegExpValidator(QRegExp('[0-9]+'))
         self.Seconds.setValidator(set_Validator_SecMin)
         self.Minutes.setValidator(set_Validator_SecMin)
         set_Validator_hrs = QRegExpValidator(QRegExp('[0-8]+'))
         self.Hours.setValidator(set_Validator_hrs)
 
+        # Set background to transparent and frameless window & Always on Top ..............
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
+        # Set text alignment to center......................................
         self.Seconds.setAlignment(Qt.AlignCenter)
         self.Minutes.setAlignment(Qt.AlignCenter)
         self.Hours.setAlignment(Qt.AlignCenter)
         self.oldPosition = None
 
+        # Setting object to ProgressBar class...............................
         self.progress = CrlProgressBar()
 
+        # Starting Qtimer...................................................
         self.timer = QTimer(self)
-        self.timer.timeout.connect(self.resumeOpz)
-        self.timer.start(995)
+        self.timer.timeout.connect(self.resumeOpz)  # Main function to run when Timer TimeOut
+        self.timer.start(997)  # Time is decreased because few micro-seconds are needed for operations
 
         self.ShowRoundProgressBar()
+        # For make shadows for items in Ui...........
         self.shadow = QGraphicsDropShadowEffect(self)
-        self.HighLt = {}
+        self.HighLt = {}  # Making objects for shadows.......
 
+        # Setting default variables to their values.........
         self.timerStarted = False
-
         self.Sec_increment = 1
         self.Min_increment = 0
         self.Hrs_increment = 0
-
         self.TimerHrs = None
         self.TimerMins = None
         self.TimerSecs = None
@@ -56,12 +67,23 @@ class MainWindow(QMainWindow):
         self.y1 = 0
         self.TimeOut_Count = 0
 
+        # making a object to QMediaPlaylist  Class...........
+        self.playlist = QMediaPlaylist()
+        # Audio payer Staff.......
+        self.player = None
+        self.FolderAdded = 0
+        self.song_list = []
+        self.full_list = []
+        self.Playing = 0
+        self.SongIndex = 0
+
+        # Functions that critical for operation.........
         self.HandleButtons()
         self.HandleEditables()
         self.Set_Shadow()
 
     def Set_Shadow(self):
-
+        # Setting shadows for better visibility..........
         self.shadow.setBlurRadius(10)
         self.shadow.setXOffset(1)
         self.shadow.setYOffset(1)
@@ -153,7 +175,7 @@ class MainWindow(QMainWindow):
         self.Timer.setGraphicsEffect(self.HighLt[12])
 
     def HandleButtons(self):
-
+        # Buttons that handle Main operations...........
         self.StopWatch.clicked.connect(self.SetTimerOpz)
         self.Timer.clicked.connect(self.SetStopWatchOpz)
         self.ResetBTN.clicked.connect(self.ReSet)
@@ -161,11 +183,18 @@ class MainWindow(QMainWindow):
         self.StopBTN.clicked.connect(self.Stop)
         self.CloseBTN.clicked.connect(self.CloseApp)
 
+        # Audio Player Buttons......................
+        self.PlayBtn.clicked.connect(self.Play_Pause)
+        self.Next.clicked.connect(self.NextSong)
+        self.Back.clicked.connect(self.PreviousSong)
+        self.Folder.clicked.connect(self.AudioFolder)
+
     def HandleEditables(self):
+        # Setting Labels to readonly when starting.....
         self.Minutes.setReadOnly(True)
         self.Hours.setReadOnly(True)
         self.Seconds.setReadOnly(True)
-
+        # Disable StopWatch button ....................
         self.StopWatch.setEnabled(False)
 
     def SetTimerOpz(self):
@@ -207,6 +236,8 @@ class MainWindow(QMainWindow):
 
     def resumeOpz(self):
         if self.timerStarted:
+            ############################################################################################################
+            # Main StopWatch Operations....................................
             if self.StopWatch.isChecked():
                 if self.Sec_increment == 60:
 
@@ -245,7 +276,10 @@ class MainWindow(QMainWindow):
                     self.progress.set_value(self.Sec_increment)
                     self.Sec_increment += 1
                     self.x1 = time.perf_counter()
+
+            ############################################################################################################
             # Main Timer operations.............................
+
             elif self.Timer.isChecked():
                 self.TimerSecs = int(self.TimerSecs)
                 if self.TimerSecs != 0:
@@ -261,6 +295,7 @@ class MainWindow(QMainWindow):
                     if self.TimerMins != 0:
                         self.TimerSecs = 59
                         self.Seconds.setText("59")
+                        self.progress.set_value(59)
                         self.TimerMins -= 1
                         if self.TimerMins < 10:
                             self.Minutes.setText(f"0{str(self.TimerMins)}")
@@ -272,6 +307,7 @@ class MainWindow(QMainWindow):
                         if self.TimerHrs != 0:
                             self.TimerMins = 59
                             self.TimerSecs = 59
+                            self.progress.set_value(59)
                             self.Minutes.setText("59")
                             self.Seconds.setText("59")
                             self.TimerHrs -= 1
@@ -287,14 +323,14 @@ class MainWindow(QMainWindow):
         self.TimeOut_Count = 1
         self.StartBTN.setEnabled(False)
         self.StopBTN.setEnabled(True)
-        # print(f"Empty :P{self.Hours.text()}P")
+
         if self.Timer.isChecked():
             try:
                 self.TimerSecs = int(self.Seconds.text())
                 self.TimerMins = int(self.Minutes.text())
                 self.TimerHrs = int(self.Hours.text())
             except:  # ValueError
-                
+
                 if self.Seconds.text() == "":
                     self.TimerSecs = 0
 
@@ -309,9 +345,9 @@ class MainWindow(QMainWindow):
             print(f"Timer...{self.TimerSecs}.......{self.TimerMins}........{self.TimerHrs}.....")
             self.progress.set_value(self.TimerSecs)
 
-            self.Minutes.setReadOnly(True)
-            self.Hours.setReadOnly(True)
-            self.Seconds.setReadOnly(True)
+            self.Minutes.setReadOnly(False)
+            self.Hours.setReadOnly(False)
+            self.Seconds.setReadOnly(False)
 
     def Stop(self):
         self.timerStarted = False
@@ -342,23 +378,21 @@ class MainWindow(QMainWindow):
 
     def TimeOut(self):
         if self.TimeOut_Count == 1:
-
             winsound.PlaySound("Sounds/Alarm.wav", winsound.SND_FILENAME)
             self.TimeOut_Count = 0
+            self.timerStarted = False
             self.StopBTN.setEnabled(False)
             self.StartBTN.setEnabled(True)
-            
-     
+
+            self.Minutes.setReadOnly(False)
+            self.Hours.setReadOnly(False)
+            self.Seconds.setReadOnly(False)
+
+    ####################################################################################################################
+    """________________________________________ MP3 Playing Capabilities ____________________________________________"""
+
     def Play_Pause(self):
         if self.FolderAdded == 1 and len(self.song_list) != 0:
-            try:
-                for item in full_list:
-                    self.playlist.addMedia(QMediaContent(QUrl.fromLocalFile(item)))
-                self.player = QMediaPlayer()
-                self.player.setPlaylist(self.playlist)
-
-            except :
-                print("Error.........Song Listing........")
 
             if self.Playing == 0:
                 print("Play")
@@ -386,8 +420,21 @@ class MainWindow(QMainWindow):
 
     def AudioFolder(self):
         try:
+            self.player.stop()
+            self.label_MS.setText("MS")
+            self.PlayBtn.setIcon(QIcon(r'Icons\playIcon.png'))
+            self.Playing = 0
+            self.SongIndex = 0
+
+        except:
+            print("Nothing playing now .................")
+        if self.FolderAdded == 1:
+            self.full_list.clear()
+            self.song_list.clear()
+            self.playlist.clear()
+        try:
             Audio_folder = str(QFileDialog.getExistingDirectory(self, " Select Directory to Play Audios...."))
-            os.chdir(Audio_folder)
+
             song_list_content = os.listdir(Audio_folder)
 
             self.song_list = [x for x in song_list_content if x.endswith(".mp3")]
@@ -395,9 +442,19 @@ class MainWindow(QMainWindow):
             for i in self.song_list:
                 audio = f"{Audio_folder}/{i}"
                 print(audio)
-                full_list.append(audio)
-            #print(full_list)
+                self.full_list.append(audio)
+
+            try:
+                for item in self.full_list:
+                    self.playlist.addMedia(QMediaContent(QUrl.fromLocalFile(item)))
+                self.player = QMediaPlayer()
+                self.player.setPlaylist(self.playlist)
+
+            except:
+                print("Error.........Song Listing........")
+
             self.FolderAdded = 1
+
         except OSError as x1:
             print(x1)
         except:
@@ -406,19 +463,12 @@ class MainWindow(QMainWindow):
     def NextSong(self):
         print("Next")
         try:
-            self.player.pause()
-
             if self.SongIndex != len(self.song_list):
                 self.SongIndex += 1
             elif self.SongIndex == len(self.song_list):
                 self.SongIndex = 0
 
             QMediaPlaylist.setCurrentIndex(self.playlist, self.SongIndex)
-            self.player.play()
-
-            name = self.song_list[self.SongIndex]
-            self.SongName.setText(str(name))
-
 
         except AttributeError as e1:
             print(e1)
@@ -431,14 +481,9 @@ class MainWindow(QMainWindow):
             if self.SongIndex != 0:
                 self.SongIndex -= 1
             elif self.SongIndex == 0:
-                self.SongIndex = len(self.song_list)-1
+                self.SongIndex = len(self.song_list) - 1
 
-            self.player.pause()
             QMediaPlaylist.setCurrentIndex(self.playlist, self.SongIndex)
-            self.player.play()
-
-            name = self.song_list[self.SongIndex]
-            self.SongName.setText(str(name))
 
         except AttributeError as e1:
             print(e1)
@@ -446,10 +491,12 @@ class MainWindow(QMainWindow):
             print("Error happen when Backing")
 
     def GIF(self):
-        Loading_GIf = QMovie(r"GIFs\audio-wave.gif")
+        Loading_GIf = QMovie(r'GIFs\AudioWave.gif')
         self.label_MS.setMovie(Loading_GIf)
         Loading_GIf.start()
-               
+
+    ########################################################################################################################
+    ".............................. Used to  closing Application because window is frame less ........................."
 
     def CloseApp(self):
         end_time = time.perf_counter()
@@ -457,6 +504,9 @@ class MainWindow(QMainWindow):
         print(f"Time for all : {full_time}")
         print("............... Closing Application ...............")
         QApplication.instance().quit()
+
+    ########################################################################################################################
+    "......................... Mouse Press & Move Events help to move the Application window .........................."
 
     def mousePressEvent(self, event):
         self.oldPosition = event.globalPos()
