@@ -14,12 +14,15 @@ class CrlProgressBar(QWidget):
         self.progress_width = 12
         self.progress_rounded_cap = True
         self.enable_BackGround = True
-
+        
+        # Setting colours to the progress bar ...............
         self.BackGround_color = QColor(68, 71, 90, 110)
         self.progress_color = QColor(0, 237, 255, 200)
+        
+        # Max value is set to 60 because, to a minute there are 60 seconds...... 
         self.max_value = 60
 
-        # Set default sizes..
+        # Set default sizes........
         self.resize(self.width, self.height)
 
     def set_value(self,value):
