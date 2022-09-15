@@ -11,11 +11,11 @@ Not only that it is transparent too. So, you can use this program while doing ot
 # Functions
 There are three 3 functions in this application.........
 
-1.Stopwatch ⏱ 
+1. Stopwatch ⏱ 
 
-2.Timer ⏲ 
+2. Timer ⏲ 
 
-3.Audio Player [ MP3] 🔉 
+3. Audio Player [ MP3] 🔉 
 
 
 # Stopwatch  ...............
