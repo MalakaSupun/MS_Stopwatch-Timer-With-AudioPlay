@@ -17,6 +17,7 @@ There are three 3 functions in this application.........
 
 3. Audio Player [ MP3] 🔉 
 
+![Functions](https://user-images.githubusercontent.com/71941117/190486218-ad8a415f-b638-407e-8b84-fa5d34abc057.gif)
 
 ### 1 . Stopwatch  ...............
 
