@@ -23,7 +23,7 @@ There are three 3 functions in this application.........
 
 3. Audio Player [ MP3] 🔉 
 
-All three of them are working currently and can be used as fully functional stopwatch or timer ..otherwise wecan used it as a mp3 player.
+All three of them are working currently and can be used as fully functional stopwatch or timer ..... otherwise we can used it as a mp3 player.
 
 ![Functions](https://user-images.githubusercontent.com/71941117/190486218-ad8a415f-b638-407e-8b84-fa5d34abc057.gif)
 
@@ -34,3 +34,15 @@ All three of them are working currently and can be used as fully functional stop
 ### 3 . MP3 Player ..............
 
 ## Reference & Resources.....
+
+### Sound track,Icons & Gif
+
+All 6 icons used in this project are from https://icons8.com/   <br />
+[All icons used :](https://github.com/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay/tree/main/Icons)
+
+Gif is created with tools from https://loading.io/  <br />
+[Gif that used in project :](https://github.com/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay/tree/main/GIFs)
+
+The sound track is from https://mixkit.co/free-sound-effects/alarm/   <br />
+[Sound track 🔊 name : Short rooster crowing]  <br />
+[The alarm sound track :](https://github.com/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay/tree/main/Sounds)
