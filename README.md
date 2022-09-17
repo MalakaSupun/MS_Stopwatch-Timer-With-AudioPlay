@@ -34,6 +34,10 @@ All three of them are working currently and can be used as fully functional stop
 ### 3 . MP3 Player ..............
 
 ## Reference & Resources.....
+Round Progress Bar :
+These are the resources for the creating round progress bar. These videos will explaine the process greatly. <br />
+[TUTORIAL - Circular Progress Bar - Qt Widgets (CUSTOM WIDGETS / Python / PySide6) PART 1]https://www.youtube.com/watch?v=E7lhFwcDpMI&t=135s
+[TUTORIAL - Circular Splash Screen - [ MODERN GUI - Qt Designer / Python / PySide6 ] PART 2]https://www.youtube.com/watch?v=LSKbjuWvoN4
 
 ### Sound track,Icons & Gif
 
