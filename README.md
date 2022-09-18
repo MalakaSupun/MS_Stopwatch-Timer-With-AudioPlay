@@ -24,9 +24,11 @@ There are three 3 functions in this application.........
 3. Audio Player [ MP3] 🔉 
 
 All three of them are working currently and can be used as fully functional stopwatch or timer ..... otherwise we can used it as a mp3 player.
+* You can use ![icons8-close-window-96](https://user-images.githubusercontent.com/71941117/190925878-cfd89ff7-c7a2-434b-9076-66833258f4f4.png)
+to close the application <br />
 
 ![Functions](https://user-images.githubusercontent.com/71941117/190486218-ad8a415f-b638-407e-8b84-fa5d34abc057.gif)
-
+ 
 ### 1 . Stopwatch  ............... 
 Just like a stop watch, application will start running on and as soon as the 'Start' button pressed. <br />
 But if we started timer operations, you need to toggle the 'Stopwatch' button first. 
