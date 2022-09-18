@@ -27,7 +27,7 @@ All three of them are working currently and can be used as fully functional stop
 
 ![Functions](https://user-images.githubusercontent.com/71941117/190486218-ad8a415f-b638-407e-8b84-fa5d34abc057.gif)
 
-### 1 . Stopwatch  ............... < br/>
+### 1 . Stopwatch  ............... 
 Just like a stop watch, application will start running on and as soon as the 'Start' button pressed.
 But if we started timer operations, you need to toggle the 'Stopwatch' button first. 
 
@@ -36,12 +36,12 @@ But if we started timer operations, you need to toggle the 'Stopwatch' button fi
 ### 3 . MP3 Player ..............
 
 ## Reference & Resources.....
-Round Progress Bar :
+Round Progress Bar : <br />
 These are the resources for the creating round progress bar. These videos will explaine the process greatly. <br />
 [TUTORIAL - Circular Progress Bar - Qt Widgets (CUSTOM WIDGETS / Python / PySide6) PART 1]   https://www.youtube.com/watch?v=E7lhFwcDpMI&t=135s  <br />
 [TUTORIAL - Circular Splash Screen - [ MODERN GUI - Qt Designer / Python / PySide6 ] PART 2] https://www.youtube.com/watch?v=LSKbjuWvoN4  <br />
 
-This is the link to his YouTube channel
+[This is the link to his YouTube channel :] (https://www.youtube.com/c/WandersonIsMe) <br />
 
 ### Sound track,Icons & Gif
 
