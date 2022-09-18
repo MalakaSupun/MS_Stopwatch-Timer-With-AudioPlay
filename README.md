@@ -27,7 +27,9 @@ All three of them are working currently and can be used as fully functional stop
 
 ![Functions](https://user-images.githubusercontent.com/71941117/190486218-ad8a415f-b638-407e-8b84-fa5d34abc057.gif)
 
-### 1 . Stopwatch  ...............
+### 1 . Stopwatch  ............... < br/>
+Just like a stop watch, application will start running on and as soon as the 'Start' button pressed.
+But if we started timer operations, you need to toggle the 'Stopwatch' button first. 
 
 ### 2 . Timer ....................
 
