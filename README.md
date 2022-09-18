@@ -8,7 +8,7 @@ Not only that it is transparent too. So, you can use this program while doing ot
 
 #### Requirements :
 
-1. Python 3
+1. Python 3.9
 2. PyQt5
 
 ![Screen shot 1](https://user-images.githubusercontent.com/71941117/189807884-91b07974-742c-4061-af26-37c02cea118d.jpg)
@@ -31,17 +31,20 @@ All three of them are working currently and can be used as fully functional stop
 Just like a stop watch, application will start running on and as soon as the 'Start' button pressed. <br />
 But if we started timer operations, you need to toggle the 'Stopwatch' button first. 
 
+You can use 'Reset' button to reset the timer at every state of the operation.<br />
 See the Gif for further assistance.....
 
 ### 2 . Timer ....................
-Operation  is not different from a actual 'Timer', we need to toggle the 'Timer' button and set the timer values to run, and just press Start ' button to start timer.
+Operation  is not different from a actual 'Timer', we need to toggle the 'Timer' button and set the timer values to run, and just press Start ' button to start timer. We can stop the timer by pressing 'Stop' button. <br />
+You can use 'Reset' button to reset the timer at every state of the operation.<br />
+See the Gif for further assistance.....
 
 ### 3 . MP3 Player ..............
 
 ## Reference & Resources.....
 Round Progress Bar : <br />
 These are the resources for the creating round progress bar. These videos will explaine the process greatly. <br />
-[TUTORIAL - Circular Progress Bar - Qt Widgets (CUSTOM WIDGETS / Python / PySide6) PART 1]   https://www.youtube.com/watch?v=E7lhFwcDpMI&t=135s  <br />
+[TUTORIAL - Circular Progress Bar - Qt Widgets (CUSTOM WIDGETS / Python / PySide6) PART 1]   (https://www.youtube.com/watch?v=E7lhFwcDpMI&t=135s)  <br />
 [TUTORIAL - Circular Splash Screen - [ MODERN GUI - Qt Designer / Python / PySide6 ] PART 2] https://www.youtube.com/watch?v=LSKbjuWvoN4  <br />
 
 [This is the link to his YouTube channel:] (https://www.youtube.com/c/WandersonIsMe) <br />
