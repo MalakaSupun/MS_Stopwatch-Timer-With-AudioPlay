@@ -52,21 +52,21 @@ First of all playing a mp3 is not going to effect the the normal operation of th
 
 
 ## Reference & Resources.....
-Round Progress Bar : <br />
+**Round Progress Bar :** <br />
 These are the resources for the creating round progress bar. These videos will explaine the process greatly. <br />
-[TUTORIAL - Circular Progress Bar - Qt Widgets (CUSTOM WIDGETS / Python / PySide6) PART 1]   (https://www.youtube.com/watch?v=E7lhFwcDpMI&t=135s)  <br />
-[TUTORIAL - Circular Splash Screen - [ MODERN GUI - Qt Designer / Python / PySide6 ] PART 2] https://www.youtube.com/watch?v=LSKbjuWvoN4  <br />
+* [TUTORIAL - Circular Progress Bar - Qt Widgets (CUSTOM WIDGETS / Python / PySide6) PART 1]   (https://www.youtube.com/watch?v=E7lhFwcDpMI&t=135s)  <br />
+* [TUTORIAL - Circular Splash Screen - [ MODERN GUI - Qt Designer / Python / PySide6 ] PART 2] https://www.youtube.com/watch?v=LSKbjuWvoN4  <br />
 
-[This is the link to his YouTube channel:] (https://www.youtube.com/c/WandersonIsMe) <br />
+* [This is the link to his YouTube channel:] (https://www.youtube.com/c/WandersonIsMe) <br />
 
 ### Sound track,Icons & Gif
 
-All 6 icons used in this project are from https://icons8.com/   <br />
+* All 6 icons used in this project are from https://icons8.com/   <br />
 [All icons used :](https://github.com/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay/tree/main/Icons)
 
-Gif is created with tools from https://loading.io/  <br />
+* Gif is created with tools from https://loading.io/  <br />
 [Gif that used in project :](https://github.com/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay/tree/main/GIFs)
 
-The sound track is from https://mixkit.co/free-sound-effects/alarm/   <br />
+* The sound track is from https://mixkit.co/free-sound-effects/alarm/   <br />
 [Sound track 🔊 name : Short rooster crowing]  <br />
 [The alarm sound track :](https://github.com/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay/tree/main/Sounds)
