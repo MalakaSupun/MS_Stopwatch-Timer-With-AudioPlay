@@ -1,8 +1,8 @@
 # Stopwatch-Timer-With-AudioPlay
 
-This is a fun project that can used for day-to-day needs.<br />
-We can use this project as your stopwatch ⏱ or timer ⏲ with simple MP3 Player .<br />
-Not only that it is transparent* too. So, you can use this program while doing other tasks as well.... <br />
+This is a fun project that can be used for day-to-day needs.<br />
+You can use this as your stopwatch ⏱ or timer ⏲ with simple MP3 Player .<br />
+This application is transparent* too. So, you can use this while doing other tasks as well.... <br />
 Application has a round progress bar that can count 60 seconds.😇
 
 #### Requirements :
