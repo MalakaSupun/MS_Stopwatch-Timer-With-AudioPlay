@@ -1,10 +1,9 @@
 # Stopwatch-Timer-With-AudioPlay
 
-This is a fun project that can used for day-to-day needs.
-
-We can use this project as your stopwatch ⏱ or timer ⏲ with simple MP3 Player .
-
-Not only that it is transparent too. So, you can use this program while doing other tasks.... 
+This is a fun project that can used for day-to-day needs.<br />
+We can use this project as your stopwatch ⏱ or timer ⏲ with simple MP3 Player .<br />
+Not only that it is transparent* too. So, you can use this program while doing other tasks as well.... <br />
+Application has a round progress bar that can count 60 seconds.😇
 
 #### Requirements :
 
@@ -38,6 +37,7 @@ See the Gif for further assistance.....
 
 ### 2 . Timer ....................
 Operation  is not different from a actual 'Timer', we need to toggle the 'Timer' button and set the timer values to run, and just press Start ' button to start timer. We can stop the timer by pressing 'Stop' button. <br />
+
 You can use 'Reset' button to reset the timer at every state of the operation.<br />
 See the Gif for further assistance.....
 
@@ -48,14 +48,14 @@ First of all playing a mp3 is not going to effect the the normal operation of th
 * Next just pressing "Play Button" ![playIcon](https://user-images.githubusercontent.com/71941117/190924722-c50bd1e5-3a63-4d02-8346-ebd62b3770a5.png) you can start player...
 * Pressing "Pause Button" ![pauseIcon](https://user-images.githubusercontent.com/71941117/190924829-97283423-45a2-4d2c-8df9-df8b3e9cb952.png)
   we can pause the song. 
-* ![icons8-backward-button-96](https://user-images.githubusercontent.com/71941117/190924877-7af6fbf4-b517-43b9-a470-b6362a64ab79.png)
+* ![icons8-backward-button-96](https://user-images.githubusercontent.com/71941117/190924877-7af6fbf4-b517-43b9-a470-b6362a64ab79.png) ,
 ![icons8-resume-button-96](https://user-images.githubusercontent.com/71941117/190924880-f4a8fd22-58ad-4de6-8d58-0cdb762f98f5.png) These buttons can use to skip to next song or go back to previous song.
 * You can assign new song folder again from ![FolderIcon](https://user-images.githubusercontent.com/71941117/190925000-0ce414ef-8b5d-4d58-9fd4-290a33c53f9f.png) too. <br />
 
 
 ## Reference & Resources.....
 **Round Progress Bar :** <br />
-These are the resources for the creating round progress bar. These videos will explaine the process greatly. <br />
+These are the resources for the creating round progress bar. These videos will explaine the process nicely😇. <br />
 * [TUTORIAL - Circular Progress Bar - Qt Widgets (CUSTOM WIDGETS / Python / PySide6) PART 1]   (https://www.youtube.com/watch?v=E7lhFwcDpMI&t=135s)  <br />
 * [TUTORIAL - Circular Splash Screen - [ MODERN GUI - Qt Designer / Python / PySide6 ] PART 2] https://www.youtube.com/watch?v=LSKbjuWvoN4  <br />
 
