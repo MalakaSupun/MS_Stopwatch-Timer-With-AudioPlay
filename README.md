@@ -1,5 +1,5 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay?logo=python&logoColor=%23fff&style=for-the-badge)
-
+![GitHub repo size](https://img.shields.io/github/repo-size/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay?logo=PyCharm&style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay?logo=Python&style=for-the-badge)
 # Stopwatch-Timer-With-AudioPlay
 
 This is a fun project that can be used for day-to-day needs.<br />
