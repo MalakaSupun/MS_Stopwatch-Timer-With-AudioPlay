@@ -7,7 +7,8 @@ You can use this as your stopwatch ⏱ or timer ⏲ with simple MP3 Player .<br 
 This application is transparent* too. So, you can use this while doing other tasks as well.... <br />
 Application has a round progress bar that can count 60 seconds.😇
 
-Use .exe to execute the application....🎁🎁🎁
+Use .exe to execute the application....🎁🎁🎁 <br />
+[ in new Relese v1.1 ]
 
 #### Requirements :
 
