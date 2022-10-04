@@ -1,17 +1,27 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay?logo=GitHub&style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay?logo=Python&style=for-the-badge)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay?logo=GitHub&style=for-the-badge)
-# Stopwatch-Timer-With-AudioPlay
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay?logo=GitHub&style=for-the-badge)<br />
 
+
+<p align="center">
+    <img width="130" src="https://user-images.githubusercontent.com/71941117/193910680-b16b605b-ab8a-4a97-a76d-fd17a50e24b9.png">
+</p>
+
+<h1 align="center">
+  Stopwatch Timer With AudioPlay
+</h1>
+
+<p align="center">
 This is a fun project that can be used for day-to-day needs.<br />
 You can use this as your stopwatch ⏱ or timer ⏲ with simple MP3 Player .<br />
 This application is transparent* too. So, you can use this while doing other tasks as well.... <br />
 Application has a round progress bar that can count 60 seconds.😇
-
 Use .exe to execute the application....🎁🎁🎁 <br />
 [ in new Relese v1.1 ]
+</p>
 
-#### Requirements :
+
+## Requirements :
 
 1. Python 3.9
 2. PyQt5
