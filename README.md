@@ -88,3 +88,9 @@ Following are the resources for the creating round progress bar. These videos wi
 * The sound track is from https://mixkit.co/free-sound-effects/alarm/   <br />
 [Sound track 🔊 name : Short rooster crowing]  <br />
 [The alarm sound track :](https://github.com/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay/tree/main/Sounds)
+
+#
+** 
+**Actually, Middle part of the application is not completely transparent. I have used rgba(255,255,255,15) as the colour of it.Because if that part is completely transparent it is difficult to move the application window to where the user needs.**
+
+#
