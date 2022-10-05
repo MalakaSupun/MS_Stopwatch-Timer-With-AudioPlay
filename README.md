@@ -1,14 +1,14 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay?logo=GitHub&style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay?logo=Python&style=for-the-badge)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/MalakaSupun/MS_Stopwatch-Timer-With-AudioPlay?logo=GitHub&style=for-the-badge)<br />
-
+#
 
 <p align="center">
     <img width="130" src="https://user-images.githubusercontent.com/71941117/193910680-b16b605b-ab8a-4a97-a76d-fd17a50e24b9.png">
 </p>
 
 <h1 align="center">
-  Stopwatch Timer With AudioPlay
+  MS Stopwatch_Timer With AudioPlay
 </h1>
 
 <p align="center">
@@ -20,6 +20,7 @@ Use .exe to execute the application....🎁🎁🎁 <br />
 [ in new Relese v1.1 ]
 </p>
 
+#
 
 ## Requirements :
 
