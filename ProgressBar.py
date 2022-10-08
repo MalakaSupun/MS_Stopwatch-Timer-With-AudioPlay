@@ -1,3 +1,4 @@
+# import PyQt5 libraries .....................
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -26,10 +27,12 @@ class CrlProgressBar(QWidget):
         self.resize(self.width, self.height)
 
     def set_value(self,value):
+        # Make the round progress bar draws again and again ...................
         self.value = value
         self.repaint()
 
     def Set_Shadow(self, enable):
+        # Setting  a shadow to the progress Bar ..............................
         if enable:
            self.shadow = QGraphicsDropShadowEffect(self)
            self.shadow.setBlurRadius(8)
@@ -37,9 +40,9 @@ class CrlProgressBar(QWidget):
            self.shadow.setYOffset(0)
            self.shadow.setColor(QColor(0, 0, 0, 130))
            self.setGraphicsEffect(self.shadow)
-
+    # Main painting method.......................
     def paintEvent(self, e):
-
+       
         width = self.width - self.progress_width
         height = self.height - self.progress_width
         margin = self.progress_width / 2
