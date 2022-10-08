@@ -1,14 +1,14 @@
 import sys
 import os
 import winsound
+import time
 
+# Importing PyQt5................. 
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.uic import loadUiType, loadUi
 from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer, QMediaPlaylist
-
-import time
 
 from ProgressBar import CrlProgressBar
 
@@ -63,6 +63,8 @@ class MainWindow(QMainWindow):
         self.TimerHrs = None
         self.TimerMins = None
         self.TimerSecs = None
+        
+        # Navigation for moving the application...........
         self.x1 = 0
         self.y1 = 0
         self.TimeOut_Count = 0
