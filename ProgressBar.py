@@ -13,7 +13,11 @@ class CrlProgressBar(QWidget):
         self.width = 502
         self.height = 502
         self.progress_width = 12
+        
+        # Making end of bar round............
         self.progress_rounded_cap = True
+        
+        # Making background circle...........
         self.enable_BackGround = True
         
         # Setting colours to the progress bar ...............
@@ -40,6 +44,7 @@ class CrlProgressBar(QWidget):
            self.shadow.setYOffset(0)
            self.shadow.setColor(QColor(0, 0, 0, 130))
            self.setGraphicsEffect(self.shadow)
+            
     # Main painting method.......................
     def paintEvent(self, e):
        
@@ -51,8 +56,7 @@ class CrlProgressBar(QWidget):
         paint = QPainter()
         paint.begin(self)
         paint.setRenderHint(QPainter.Antialiasing)
-        #paint.setFont(QFont(self.font_family, self.font_size))
-
+       
         rect = QRect(0, 0, self.width, self.height)
         paint.setPen(Qt.NoPen)
         paint.drawRect(rect)
@@ -61,9 +65,11 @@ class CrlProgressBar(QWidget):
         pen.setColor(QColor(self.progress_color))
         pen.setWidth(self.progress_width)
 
+        # Painting Round Progress........................ 
         if self.progress_rounded_cap:
             pen.setCapStyle(Qt.RoundCap)
-
+        
+        # Enable background circle........................
         if self.enable_BackGround:
             pen.setColor(QColor(self.BackGround_color))
             paint.setPen(pen)
