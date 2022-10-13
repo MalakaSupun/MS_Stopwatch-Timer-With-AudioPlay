@@ -1,6 +1,10 @@
+# System operations ...............
 import sys
+# OS module for operation .........
 import os
+# For alarm sound .................
 import winsound
+# Time module for applications.....
 import time
 
 # Importing PyQt5................. 
@@ -10,6 +14,7 @@ from PyQt5.QtGui import *
 from PyQt5.uic import loadUiType, loadUi
 from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer, QMediaPlaylist
 
+# Progress bar Class for application.....
 from ProgressBar import CrlProgressBar
 
 full_list = []
@@ -77,10 +82,13 @@ class MainWindow(QMainWindow):
         self.playlist = QMediaPlaylist()
         
         # Audio payer Staff.......
+        
         self.player = None
-        self.FolderAdded = 0
+        
         self.song_list = []
         self.full_list = []
+        
+        self.FolderAdded = 0
         self.Playing = 0
         self.SongIndex = 0
 
@@ -201,6 +209,7 @@ class MainWindow(QMainWindow):
         self.Minutes.setReadOnly(True)
         self.Hours.setReadOnly(True)
         self.Seconds.setReadOnly(True)
+        
         # Disable StopWatch button ....................
         self.StopWatch.setEnabled(False)
 
