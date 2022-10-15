@@ -7,12 +7,11 @@ from PyQt5.QtGui import *
 class CrlProgressBar(QWidget):
     def __init__(self):
         QWidget.__init__(self)
-
-        # Parameters fro the project...
-        self.value = 0
-        self.width = 502
+               
+        self.value = 0            # value of the progress bar
+        self.width = 502  
         self.height = 502
-        self.progress_width = 12
+        self.progress_width = 12  # Width of progress bar 
         
         # Making end of bar round............
         self.progress_rounded_cap = True
