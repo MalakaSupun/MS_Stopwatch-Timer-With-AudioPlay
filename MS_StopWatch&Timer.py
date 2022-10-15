@@ -16,8 +16,9 @@ from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer, QMediaPlaylist
 
 # Progress bar Class for application.....
 from ProgressBar import CrlProgressBar
-
+# All files and paths for them.....
 full_list = []
+# Only Songs in list ....................
 song_list = []
 
 
