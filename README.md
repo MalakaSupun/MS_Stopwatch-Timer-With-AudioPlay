@@ -23,6 +23,7 @@ Use .exe to execute the application....🎁🎁🎁 <br />
 #
 
 ## Requirements :
+These are the basic requirement of the application,
 
 1. Python 3.9
 2. PyQt5
