@@ -11,7 +11,9 @@ import time
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-from PyQt5.uic import loadUiType, loadUi
+from PyQt5.uic import loadUi
+
+# Packages for play mp3s .....
 from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer, QMediaPlaylist
 
 # Progress bar Class for application.....
@@ -57,8 +59,10 @@ class MainWindow(QMainWindow):
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.resumeOpz)  # Main function to run when Timer TimeOut
         self.timer.start(997)  # Time is decreased because few micro-seconds are needed for operations
-
+        
+        # Set-up Round progress bar in application ......... 
         self.ShowRoundProgressBar()
+        
         # For make shadows for items in Ui...........
         self.shadow = QGraphicsDropShadowEffect(self)
         self.HighLt = {}  # Making objects for shadows.......
