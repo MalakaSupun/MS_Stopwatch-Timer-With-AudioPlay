@@ -20,8 +20,8 @@ class CrlProgressBar(QWidget):
         self.enable_BackGround = True
         
         # Setting colours to the progress bar ...............
-        self.BackGround_color = QColor(68, 71, 90, 110)
-        self.progress_color = QColor(0, 237, 255, 200)
+        self.BackGround_color = QColor(68, 71, 90, 110) # Background color for progress bar
+        self.progress_color = QColor(0, 237, 255, 200)  # Background color for progress bar
         
         # Max value is set to 60 because, to a minute there are 60 seconds...... 
         self.max_value = 60
