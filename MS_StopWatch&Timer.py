@@ -89,17 +89,20 @@ class MainWindow(QMainWindow):
         # Audio payer Staff.......
         
         self.player = None
-        
+        # list that only contains mp3s..........
         self.song_list = []
+        # list that contains all files in the folder..........
         self.full_list = []
         
         self.FolderAdded = 0
         self.Playing = 0
+        # Index of song that playing ....................
         self.SongIndex = 0
 
         # Functions that critical for operation.........
         self.HandleButtons()
         self.HandleEditables()
+        # Enabling shadow for progress bar...............
         self.Set_Shadow()
 
     def Set_Shadow(self):
