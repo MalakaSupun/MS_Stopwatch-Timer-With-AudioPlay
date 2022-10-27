@@ -9,8 +9,8 @@ class CrlProgressBar(QWidget):
         QWidget.__init__(self)
                
         self.value = 0            # value of the progress bar
-        self.width = 502  
-        self.height = 502
+        self.width = 502          # Width of progress bar 
+        self.height = 502         # Height of progress bar
         self.progress_width = 12  # Width of progress bar 
         
         # Making end of bar round............
