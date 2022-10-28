@@ -532,10 +532,12 @@ class MainWindow(QMainWindow):
 
     ########################################################################################################################
     "......................... Mouse Press & Move Events help to move the Application window .........................."
-
+ 
+    # setting previous position of the application  .................
     def mousePressEvent(self, event):
         self.oldPosition = event.globalPos()
 
+    # setting moving positions to application .......................    
     def mouseMoveEvent(self, event):
         delta = QPoint(event.globalPos() - self.oldPosition)
         self.move(self.x() + delta.x(), self.y() + delta.y())
