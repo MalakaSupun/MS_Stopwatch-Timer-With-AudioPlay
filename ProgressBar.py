@@ -38,11 +38,11 @@ class CrlProgressBar(QWidget):
         # Setting  a shadow to the progress Bar ..............................
         if enable:
            self.shadow = QGraphicsDropShadowEffect(self)
-           self.shadow.setBlurRadius(8)
-           self.shadow.setXOffset(0)
+           self.shadow.setBlurRadius(8)                # The radius that going to have blur 
+           self.shadow.setXOffset(0)      
            self.shadow.setYOffset(0)
-           self.shadow.setColor(QColor(0, 0, 0, 130))
-           self.setGraphicsEffect(self.shadow)
+           self.shadow.setColor(QColor(0, 0, 0, 130))  # Shadow color .......
+           self.setGraphicsEffect(self.shadow)         # set shadow .........
             
     # Main painting method.......................
     def paintEvent(self, e):
