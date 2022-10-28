@@ -236,6 +236,7 @@ class MainWindow(QMainWindow):
     def SetStopWatchOpz(self):
 
         if self.Timer.isChecked():
+            
             self.timerStarted = False
             self.StopWatch.setEnabled(True)
             self.StopWatch.setChecked(False)
@@ -248,13 +249,13 @@ class MainWindow(QMainWindow):
 
     def ShowRoundProgressBar(self):
 
-        self.progress.width = 527
-        self.progress.height = 527
+        self.progress.width = 527     # setting progress bar width ......
+        self.progress.height = 527    # setting progress bar height .....
 
         self.progress.setFixedSize(self.progress.width, self.progress.height)
-        self.progress.move(12, 12)
-        self.progress.setParent(self.centralwidget)
-        self.progress.Set_Shadow(True)
+        self.progress.move(12, 12)                   # setting positions for middle clock and progress bar .......
+        self.progress.setParent(self.centralwidget)  # setting parent for progress bar ........
+        self.progress.Set_Shadow(True)               # make progress bar visible...............
         self.progress.lower()
         self.progress.show()
 
