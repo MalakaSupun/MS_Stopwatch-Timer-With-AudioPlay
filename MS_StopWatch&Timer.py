@@ -404,6 +404,7 @@ class MainWindow(QMainWindow):
     def TimeOut(self):
         if self.TimeOut_Count == 1:
             winsound.PlaySound("Sounds/Alarm.wav", winsound.SND_FILENAME)
+            self.Notification()
             self.TimeOut_Count = 0
             self.timerStarted = False
             self.StopBTN.setEnabled(False)
@@ -412,6 +413,18 @@ class MainWindow(QMainWindow):
             self.Minutes.setReadOnly(False)
             self.Hours.setReadOnly(False)
             self.Seconds.setReadOnly(False)
+            
+    def Notification(self):
+        notification.notify(
+            title="MS StopWatch & Timer",
+            message="Time-Out",
+            app_icon="E:\other\Python\Projects\MS_StopWatch&Timer\Icons\icons.ico",
+            timeout=10,
+            app_name="MS StopWatch & Timer",
+            ticker="Timer",
+            toast=True
+        )
+        
 
     ####################################################################################################################
     """________________________________________ MP3 Playing Capabilities ____________________________________________"""
@@ -519,6 +532,7 @@ class MainWindow(QMainWindow):
         Loading_GIf = QMovie(r'GIFs\AudioWave.gif')
         self.label_MS.setMovie(Loading_GIf)
         Loading_GIf.start()
+        
 
     ########################################################################################################################
     ".............................. Used to  closing Application because window is frame less ........................."
