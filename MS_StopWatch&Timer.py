@@ -6,6 +6,7 @@ import os
 import winsound
 # Time module for applications.....
 import time
+from plyer import notification
 
 # Importing PyQt5................. 
 from PyQt5.QtWidgets import *
