@@ -27,7 +27,7 @@ These are the basic requirement of the application,
 
 1. Python 3.9
 2. PyQt5
-3. plyer - For Notifications 
+3. plyer - For Notifications [1.2v]
 
 ![Screen shot 1](https://user-images.githubusercontent.com/71941117/189807884-91b07974-742c-4061-af26-37c02cea118d.jpg)
 
