@@ -268,18 +268,18 @@ class MainWindow(QMainWindow):
             if self.StopWatch.isChecked():
                 if self.Sec_increment == 60:
 
-                    self.Seconds.setText('00')
+                    self.Seconds.setText('00')  // Setting 0 to seconds befor starting ......
 
                     self.progress.set_value(self.Sec_increment)
                     self.Sec_increment = 1
-                    self.Min_increment += 1
+                    self.Min_increment += 1   // incrementing the minutes by 1 ......
 
                     if self.Min_increment < 10:
                         self.Minutes.setText(str(f"0{self.Min_increment}"))
 
                     elif self.Min_increment == 60:
 
-                        self.Min_increment = 0
+                        self.Min_increment = 0       // Set back minutes to 00 .....
                         self.Minutes.setText("00")
                         self.Hrs_increment += 1
 
