@@ -275,13 +275,13 @@ class MainWindow(QMainWindow):
                     self.Min_increment += 1   // incrementing the minutes by 1 ......
 
                     if self.Min_increment < 10:
-                        self.Minutes.setText(str(f"0{self.Min_increment}"))
+                        self.Minutes.setText(str(f"0{self.Min_increment}")) //if minutes are under 10 adding 0 to start .....
 
                     elif self.Min_increment == 60:
 
                         self.Min_increment = 0       // Set back minutes to 00 .....
                         self.Minutes.setText("00")
-                        self.Hrs_increment += 1
+                        self.Hrs_increment += 1      // incrementing the hours by 1 ......
 
                         if self.Hrs_increment < 10:
                             self.Hours.setText(str(f"0{self.Hrs_increment}"))
