@@ -224,8 +224,8 @@ class MainWindow(QMainWindow):
         self.StopWatch.setEnabled(False)
 
     def SetTimerOpz(self):
-
-        if self.StopWatch.isChecked():
+        
+        if self.StopWatch.isChecked():        # Checking the toggle of stopwatch...........
             self.Timer.setChecked(False)
             self.timerStarted = False
             self.Minutes.setReadOnly(True)
@@ -237,7 +237,7 @@ class MainWindow(QMainWindow):
 
     def SetStopWatchOpz(self):
 
-        if self.Timer.isChecked():
+        if self.Timer.isChecked():        # Checking the toggle of timer...........
             
             self.timerStarted = False
             self.StopWatch.setEnabled(True)
