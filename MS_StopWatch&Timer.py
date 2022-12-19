@@ -71,10 +71,10 @@ class MainWindow(QMainWindow):
 
         # Setting default variables to their values.........
         self.timerStarted = False
-        self.Sec_increment = 1
+        self.Sec_increment = 1      # Seconds increments...........
         self.Min_increment = 0
         self.Hrs_increment = 0
-        self.TimerHrs = None
+        self.TimerHrs = None        # setting hours variable........
         self.TimerMins = None
         self.TimerSecs = None
         
