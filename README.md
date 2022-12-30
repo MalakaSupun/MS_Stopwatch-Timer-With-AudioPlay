@@ -97,3 +97,7 @@ Following are the resources for the creating round progress bar. These videos wi
 **Actually, Middle part of the application is not completely transparent. I have used rgba(255,255,255,15) as the colour of it.Because if that part is completely transparent it is difficult to move the application window to where the user needs.**
 
 #
+<p align="center">
+    *******************************************************************************************************************************************
+</p>
+
