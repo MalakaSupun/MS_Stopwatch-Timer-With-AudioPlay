@@ -60,8 +60,8 @@ class CrlProgressBar(QWidget):
         paint.setPen(Qt.NoPen)
         paint.drawRect(rect)
 
-        pen = QPen()
-        pen.setColor(QColor(self.progress_color))
+        pen = QPen()                                 # Q pen drawing 
+        pen.setColor(QColor(self.progress_color))    # setting colour 
         pen.setWidth(self.progress_width)
 
         # Painting Round Progress........................ 
