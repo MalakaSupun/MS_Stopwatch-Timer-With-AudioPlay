@@ -13,7 +13,7 @@ from plyer import notification
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-from PyQt5.uic import loadUi   // loading GUI to python
+from PyQt5.uic import loadUi   # loading GUI to python
 
 # Packages for play mp3s .....
 from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer, QMediaPlaylist
