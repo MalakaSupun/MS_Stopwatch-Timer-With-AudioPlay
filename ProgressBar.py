@@ -75,8 +75,8 @@ class CrlProgressBar(QWidget):
             paint.setPen(pen)
             paint.drawArc(margin, margin, width, height, 0, 360 * 16)
 
-        pen.setColor(QColor(self.progress_color))
-        paint.setPen(pen)
+        pen.setColor(QColor(self.progress_color))     # Set new color 
+        paint.setPen(pen)                             # set pen
         
         # Drawing progress bar............... 
         paint.drawArc(margin, margin, width, height, 90 * 16, -value * 16)
