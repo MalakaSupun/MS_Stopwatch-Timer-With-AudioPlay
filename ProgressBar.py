@@ -53,11 +53,11 @@ class CrlProgressBar(QWidget):
         value = self.value * 360 / self.max_value      # Value for progress ...........
 
         paint = QPainter()                             # Q painter which we used for paonting .............
-        paint.begin(self)
+        paint.begin(self)                               
         paint.setRenderHint(QPainter.Antialiasing)
        
-        rect = QRect(0, 0, self.width, self.height)
-        paint.setPen(Qt.NoPen)
+        rect = QRect(0, 0, self.width, self.height)   # Setting hights to pen 
+        paint.setPen(Qt.NoPen)                        #  configer painting 
         paint.drawRect(rect)
 
         pen = QPen()                                 # Q pen drawing 
