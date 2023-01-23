@@ -58,7 +58,7 @@ class CrlProgressBar(QWidget):
        
         rect = QRect(0, 0, self.width, self.height)   # Setting hights to pen 
         paint.setPen(Qt.NoPen)                        #  configer painting 
-        paint.drawRect(rect)
+        paint.drawRect(rect)                          # Draw figures......
 
         pen = QPen()                                 # Q pen drawing 
         pen.setColor(QColor(self.progress_color))    # setting colour 
