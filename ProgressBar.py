@@ -32,7 +32,7 @@ class CrlProgressBar(QWidget):
     def set_value(self,value):
         # Make the round progress bar draws again and again ...................
         self.value = value
-        self.repaint()
+        self.repaint()                                # Redrawing again the lines.......
 
     def Set_Shadow(self, enable):
         # Setting  a shadow to the progress Bar ..............................
@@ -60,8 +60,8 @@ class CrlProgressBar(QWidget):
         paint.setPen(Qt.NoPen)                        #  configer painting 
         paint.drawRect(rect)                          # Draw figures......
 
-        pen = QPen()                                 # Q pen drawing 
-        pen.setColor(QColor(self.progress_color))    # setting colour 
+        pen = QPen()                                  # Q pen drawing 
+        pen.setColor(QColor(self.progress_color))     # setting colour 
         pen.setWidth(self.progress_width)
 
         # Painting Round Progress........................ 
@@ -75,8 +75,8 @@ class CrlProgressBar(QWidget):
             paint.setPen(pen)                                               # setting pen...................
             paint.drawArc(margin, margin, width, height, 0, 360 * 16)       # Drawing arc circle.....
 
-        pen.setColor(QColor(self.progress_color))     # Set new color 
-        paint.setPen(pen)                             # set pen
+        pen.setColor(QColor(self.progress_color))                           # Set new color 
+        paint.setPen(pen)                                                   # set pen
         
         # Drawing progress bar............... 
         paint.drawArc(margin, margin, width, height, 90 * 16, -value * 16)
