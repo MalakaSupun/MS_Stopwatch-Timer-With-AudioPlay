@@ -504,9 +504,9 @@ class MainWindow(QMainWindow):
     def NextSong(self):
         print("Next")
         try:
-            if self.SongIndex != len(self.song_list):
-                self.SongIndex += 1
-            elif self.SongIndex == len(self.song_list):
+            if self.SongIndex != len(self.song_list):           # If index of next song is smaller than list length.....
+                self.SongIndex += 1 
+            elif self.SongIndex == len(self.song_list):         #  # If index of next song is larger than list length..... 
                 self.SongIndex = 0
 
             QMediaPlaylist.setCurrentIndex(self.playlist, self.SongIndex)
