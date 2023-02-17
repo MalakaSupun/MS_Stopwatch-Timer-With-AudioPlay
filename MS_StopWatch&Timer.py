@@ -347,10 +347,10 @@ class MainWindow(QMainWindow):
                             self.TimeOut()
 
     def StartResume(self):
-        self.timerStarted = True
-        self.TimeOut_Count = 1
-        self.StartBTN.setEnabled(False)
-        self.StopBTN.setEnabled(True)
+        self.timerStarted = True           # Stating timer ......
+        self.TimeOut_Count = 1             # Setting timer to one .....
+        self.StartBTN.setEnabled(False)    # Enable Start button.......
+        self.StopBTN.setEnabled(True)      # Disable Stop button ......
 
         if self.Timer.isChecked():
             try:
