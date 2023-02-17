@@ -432,6 +432,10 @@ class MainWindow(QMainWindow):
     ####################################################################################################################
     """________________________________________ MP3 Playing Capabilities ____________________________________________"""
 
+     # This has little problem that skipped song is not adding to current play number.... Just need to ,
+     #   self.Playing = self.SongIndex 
+     # This will fixed with next 1.3 update...
+        
     def Play_Pause(self):
         if self.FolderAdded == 1 and len(self.song_list) != 0:
 
