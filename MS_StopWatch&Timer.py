@@ -544,8 +544,8 @@ class MainWindow(QMainWindow):
         end_time = time.perf_counter()
         full_time = end_time - self.x1
         print(f"Time for all : {full_time}")
-        print("............... Closing Application ...............")
-        QApplication.instance().quit()
+        print("............... Closing Application ...............")          # Setting close statement.......
+        QApplication.instance().quit()                                        # ending application....
 
     ########################################################################################################################
     "......................... Mouse Press & Move Events help to move the Application window .........................."
