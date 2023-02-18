@@ -406,9 +406,9 @@ class MainWindow(QMainWindow):
 
     def TimeOut(self):
         if self.TimeOut_Count == 1:
-            winsound.PlaySound("Sounds/Alarm.wav", winsound.SND_FILENAME)
-            self.Notification()
-            self.TimeOut_Count = 0
+            winsound.PlaySound("Sounds/Alarm.wav", winsound.SND_FILENAME)    # Setout alarm sound........
+            self.Notification()                                              # Stting time out notifications ....
+            self.TimeOut_Count = 0                                           # zeroing timer count.....
             self.timerStarted = False
             self.StopBTN.setEnabled(False)
             self.StartBTN.setEnabled(True)
