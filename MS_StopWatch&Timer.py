@@ -545,9 +545,9 @@ class MainWindow(QMainWindow):
     ".............................. Used to  closing Application because window is frame less ........................."
 
     def CloseApp(self):
-        end_time = time.perf_counter()
-        full_time = end_time - self.x1
-        print(f"Time for all : {full_time}")
+        end_time = time.perf_counter()                                        # end time of the app
+        full_time = end_time - self.x1                                        # to getting full time on app ,
+        print(f"Time for all : {full_time}")                                  # this used to test the application.....
         print("............... Closing Application ...............")          # Setting close statement.......
         QApplication.instance().quit()                                        # ending application....
 
