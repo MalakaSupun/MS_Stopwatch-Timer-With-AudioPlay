@@ -394,8 +394,8 @@ class MainWindow(QMainWindow):
         self.Hrs_increment = 0
 
         self.Seconds.setText("00")                                           # Setting seconds to 0 ........
-        self.Minutes.setText("00")                                           #
-        self.Hours.setText("00")                                             #
+        self.Minutes.setText("00")                                           # Setting minutes to 0 ........
+        self.Hours.setText("00")                                             # Setting hours to 0 ........
         self.progress.set_value(0)
         self.StartBTN.setEnabled(True)
         self.StopBTN.setEnabled(False)
