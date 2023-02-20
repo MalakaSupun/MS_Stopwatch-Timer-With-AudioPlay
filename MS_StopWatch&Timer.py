@@ -389,13 +389,13 @@ class MainWindow(QMainWindow):
     def ReSet(self):
 
         self.timerStarted = False
-        self.Sec_increment = 1
+        self.Sec_increment = 1                              
         self.Min_increment = 0
         self.Hrs_increment = 0
 
-        self.Seconds.setText("00")
-        self.Minutes.setText("00")
-        self.Hours.setText("00")
+        self.Seconds.setText("00")                                           # Setting seconds to 0 ........
+        self.Minutes.setText("00")                                           #
+        self.Hours.setText("00")                                             #
         self.progress.set_value(0)
         self.StartBTN.setEnabled(True)
         self.StopBTN.setEnabled(False)
