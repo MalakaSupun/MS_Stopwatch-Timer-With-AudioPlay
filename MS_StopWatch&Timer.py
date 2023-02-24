@@ -397,7 +397,7 @@ class MainWindow(QMainWindow):
         self.StartBTN.setEnabled(True)                                       # Enable Start button.......
         self.StopBTN.setEnabled(False)                                       # Disable Stop button ......
 
-        self.Minutes.setReadOnly(False)
+        self.Minutes.setReadOnly(False)                                               
         self.Hours.setReadOnly(False)
         self.Seconds.setReadOnly(False)
 
@@ -471,9 +471,9 @@ class MainWindow(QMainWindow):
         except:
             print("Nothing playing now .................")
         if self.FolderAdded == 1:
-            self.full_list.clear()
-            self.song_list.clear()
-            self.playlist.clear()
+            self.full_list.clear()      # Clear all file list....
+            self.song_list.clear()      # Clear mp3 list .....
+            self.playlist.clear()       # SOng Playlist ..... 
         try:
             Audio_folder = str(QFileDialog.getExistingDirectory(self, " Select Directory to Play Audios...."))
 
