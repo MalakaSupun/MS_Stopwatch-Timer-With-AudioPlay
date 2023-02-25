@@ -355,9 +355,9 @@ class MainWindow(QMainWindow):
 
         if self.Timer.isChecked():
             try:
-                self.TimerSecs = int(self.Seconds.text())
-                self.TimerMins = int(self.Minutes.text())
-                self.TimerHrs = int(self.Hours.text())
+                self.TimerSecs = int(self.Seconds.text())    # Make variables into ints.....
+                self.TimerMins = int(self.Minutes.text())    # Make variables into ints.....
+                self.TimerHrs  = int(self.Hours.text())      # Make variables into ints.....
             except:  # ValueError
 
                 if self.Seconds.text() == "":
