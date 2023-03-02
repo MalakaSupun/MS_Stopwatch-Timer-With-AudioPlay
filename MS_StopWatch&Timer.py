@@ -283,25 +283,23 @@ class MainWindow(QMainWindow):
                         self.Min_increment = 0                              # Set back minutes to 00 .....
                         self.Minutes.setText("00")                          # Setting 00 to clock.........
                         self.Hrs_increment += 1                             # incrementing the hours by 1 ......
-
+                        
                         if self.Hrs_increment < 10:
-                            self.Hours.setText(str(f"0{self.Hrs_increment}"))
+                            self.Hours.setText(str(f"0{self.Hrs_increment}"))  # setting one more 0 ....
                         else:
                             self.Hours.setText(str(self.Hrs_increment))
-
                     else:
                         self.Minutes.setText(str(self.Min_increment))
                     self.y1 = time.perf_counter()
                     print(f"Time = {(self.y1 - self.x1)}")
                 elif self.Sec_increment <= 59:
-
                     if self.Sec_increment < 10:
-                        self.Seconds.setText(f'0{str(self.Sec_increment)}')
+                        self.Seconds.setText(f'0{str(self.Sec_increment)}')   # setting one more 0 ....
                     else:
                         self.Seconds.setText(str(self.Sec_increment))
 
                     print(f'{str(self.Sec_increment)}')
-                    self.progress.set_value(self.Sec_increment)
+                    self.progress.set_value(self.Sec_increment)               # incrementing Progress bar
                     self.Sec_increment += 1
                     self.x1 = time.perf_counter()
 
