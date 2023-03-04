@@ -287,9 +287,9 @@ class MainWindow(QMainWindow):
                         if self.Hrs_increment < 10:
                             self.Hours.setText(str(f"0{self.Hrs_increment}"))  # setting one more 0 ....
                         else:
-                            self.Hours.setText(str(self.Hrs_increment))
+                            self.Hours.setText(str(self.Hrs_increment))        # setting up hours text ... 
                     else:
-                        self.Minutes.setText(str(self.Min_increment))
+                        self.Minutes.setText(str(self.Min_increment))          # setting up minutes text ...
                     self.y1 = time.perf_counter()
                     print(f"Time = {(self.y1 - self.x1)}")
                 elif self.Sec_increment <= 59:
