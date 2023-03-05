@@ -377,9 +377,9 @@ class MainWindow(QMainWindow):
             self.Seconds.setReadOnly(False)
 
     def Stop(self):
-        self.timerStarted = False
-        self.StopBTN.setEnabled(False)
-        self.StartBTN.setEnabled(True)
+        self.timerStarted = False                        # Setting timer start variable to false...
+        self.StopBTN.setEnabled(False)                   # Disable Stop button ...
+        self.StartBTN.setEnabled(True)                   # Enable Start button.......
         if self.Timer.isChecked():
             self.Minutes.setReadOnly(False)
             self.Hours.setReadOnly(False)
