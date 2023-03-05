@@ -296,7 +296,7 @@ class MainWindow(QMainWindow):
                     if self.Sec_increment < 10:
                         self.Seconds.setText(f'0{str(self.Sec_increment)}')   # setting one more 0 ....
                     else:
-                        self.Seconds.setText(str(self.Sec_increment))
+                        self.Seconds.setText(str(self.Sec_increment))         # setting up seconds text ...
 
                     print(f'{str(self.Sec_increment)}')
                     self.progress.set_value(self.Sec_increment)               # incrementing Progress bar
@@ -309,7 +309,7 @@ class MainWindow(QMainWindow):
             elif self.Timer.isChecked():
                 self.TimerSecs = int(self.TimerSecs)
                 if self.TimerSecs != 0:
-                    self.TimerSecs -= 1
+                    self.TimerSecs -= 1                                       # decrease seconds count........
                     self.progress.set_value(self.TimerSecs)
                     if self.TimerSecs < 10:
                         self.Seconds.setText(f"0{str(self.TimerSecs)}")
