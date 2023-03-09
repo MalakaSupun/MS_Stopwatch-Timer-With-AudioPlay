@@ -310,7 +310,7 @@ class MainWindow(QMainWindow):
                 self.TimerSecs = int(self.TimerSecs)
                 if self.TimerSecs != 0:
                     self.TimerSecs -= 1                                       # decrease seconds count........
-                    self.progress.set_value(self.TimerSecs)
+                    self.progress.set_value(self.TimerSecs)                   # Setting setvalues to progressBar.......... 
                     if self.TimerSecs < 10:
                         self.Seconds.setText(f"0{str(self.TimerSecs)}")       # setting one more 0 ....
                     else:
@@ -321,7 +321,7 @@ class MainWindow(QMainWindow):
                     if self.TimerMins != 0:
                         self.TimerSecs = 59
                         self.Seconds.setText("59")
-                        self.progress.set_value(59)
+                        self.progress.set_value(59)                             # Setting setvalues to progressBar.......... 
                         self.TimerMins -= 1
                         if self.TimerMins < 10:
                             self.Minutes.setText(f"0{str(self.TimerMins)}")     # setting one more 0 ....
@@ -333,7 +333,7 @@ class MainWindow(QMainWindow):
                         if self.TimerHrs != 0:
                             self.TimerMins = 59
                             self.TimerSecs = 59
-                            self.progress.set_value(59)
+                            self.progress.set_value(59)                             # Setting setvalues to progressBar.......... 
                             self.Minutes.setText("59")
                             self.Seconds.setText("59")
                             self.TimerHrs -= 1 
