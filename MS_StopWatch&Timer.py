@@ -202,9 +202,9 @@ class MainWindow(QMainWindow):
 
     def HandleButtons(self):
         # Buttons that handle Main operations...........
-        self.StopWatch.clicked.connect(self.SetTimerOpz)
-        self.Timer.clicked.connect(self.SetStopWatchOpz)
-        self.ResetBTN.clicked.connect(self.ReSet)
+        self.StopWatch.clicked.connect(self.SetTimerOpz)     # Stop_
+        self.Timer.clicked.connect(self.SetStopWatchOpz)     # Timer_
+        self.ResetBTN.clicked.connect(self.ReSet)            # reset ...
         self.StartBTN.clicked.connect(self.StartResume)
         self.StopBTN.clicked.connect(self.Stop)
         self.CloseBTN.clicked.connect(self.CloseApp)
@@ -331,7 +331,7 @@ class MainWindow(QMainWindow):
                     elif self.TimerMins == 0:
                         self.TimerHrs = int(self.Hours.text())
                         if self.TimerHrs != 0:
-                            self.TimerMins = 59
+                            self.TimerMins = 59                                     # minutes....
                             self.TimerSecs = 59
                             self.progress.set_value(59)                             # Setting setvalues to progressBar.......... 
                             self.Minutes.setText("59")
