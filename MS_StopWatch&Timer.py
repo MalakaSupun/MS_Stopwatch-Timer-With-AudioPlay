@@ -80,8 +80,8 @@ class MainWindow(QMainWindow):
         self.TimerSecs = None       # setting seconds variable........
         
         # Navigation for moving the application...........
-        self.x1 = 0
-        self.y1 = 0
+        self.x1 = 0                 # X orientation......
+        self.y1 = 0                 # Y orientation......
         
         # Setting time-out count .........................
         self.TimeOut_Count = 0
@@ -90,7 +90,6 @@ class MainWindow(QMainWindow):
         self.playlist = QMediaPlaylist()
         
         # Audio payer Staff.......
-        
         self.player = None
         # list that only contains mp3s..........
         self.song_list = []
@@ -205,7 +204,7 @@ class MainWindow(QMainWindow):
         self.StopWatch.clicked.connect(self.SetTimerOpz)     # Stop_
         self.Timer.clicked.connect(self.SetStopWatchOpz)     # Timer_
         self.ResetBTN.clicked.connect(self.ReSet)            # reset ...
-        self.StartBTN.clicked.connect(self.StartResume)
+        self.StartBTN.clicked.connect(self.StartResume)     
         self.StopBTN.clicked.connect(self.Stop)
         self.CloseBTN.clicked.connect(self.CloseApp)
 
