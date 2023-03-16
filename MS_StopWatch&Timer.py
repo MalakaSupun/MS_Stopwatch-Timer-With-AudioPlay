@@ -438,10 +438,10 @@ class MainWindow(QMainWindow):
         if self.FolderAdded == 1 and len(self.song_list) != 0:
 
             if self.Playing == 0:
-                print("Play")
-                self.PlayBtn.setIcon(QIcon(r'Icons\pauseIcon.png'))
-                self.GIF()
-                self.Playing = 1
+                print("Play")                                           # printing play...
+                self.PlayBtn.setIcon(QIcon(r'Icons\pauseIcon.png'))     # Icon path ......
+                self.GIF()                                              # Start GIF ......
+                self.Playing = 1                                        # variable play...
 
                 QMediaPlaylist.setCurrentIndex(self.playlist, self.SongIndex)
                 print("Audio Playing")
